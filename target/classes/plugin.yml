@@ -1,0 +1,6 @@
+name: Serializationapi
+version: 1.0-SNAPSHOT
+main: fr.lucasprogram.serializationapi.Serializationapi
+authors: [LucasProgram]
+description: Used to serialize data and save to JSON file using GSON
+website: http://lucasprogram.com/
