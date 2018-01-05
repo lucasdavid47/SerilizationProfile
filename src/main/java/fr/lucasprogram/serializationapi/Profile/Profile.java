@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2018.
+ */
+
 package fr.lucasprogram.serializationapi.Profile;
 
 import org.bukkit.entity.Player;
@@ -5,6 +9,7 @@ import org.bukkit.entity.Player;
 import java.util.UUID;
 
 public class Profile {
+
 
     private UUID id;
     private String name;
@@ -16,6 +21,7 @@ public class Profile {
 
     /**
      * Constructor of the profile
+     *
      * @param id
      * @param name
      * @param level
@@ -56,7 +62,9 @@ public class Profile {
         return z;
     }
 
-    public static Profile createProfile(Player player){
-        return new Profile(player.getUniqueId(), player.getName(), player.getLevel(), player.getLocation().getX(), player.getLocation().getY(), player.getLocation().getZ());
+    public static Profile createProfile(Player player) {
+            return new Profile(player.getUniqueId(), player.getName(), player.getLevel(), player.getLocation().getX(),
+                    player.getLocation().getY(), player.getLocation().getZ());
+
     }
 }

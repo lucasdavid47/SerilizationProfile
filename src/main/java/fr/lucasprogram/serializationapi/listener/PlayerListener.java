@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2018.
+ */
+
 package fr.lucasprogram.serializationapi.listener;
 
 import fr.lucasprogram.serializationapi.Profile.Profile;
@@ -5,9 +9,12 @@ import fr.lucasprogram.serializationapi.Serializationapi;
 import fr.lucasprogram.serializationapi.gsonutils.SerializationManager;
 import fr.lucasprogram.serializationapi.utils.FileUtils;
 import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
 import java.io.File;
@@ -65,4 +72,14 @@ public class PlayerListener implements Listener{
     }
 
 
+    @EventHandler
+    public void onMove(PlayerMoveEvent e){
+        File playerFile = new File(saveDirectory, e.getPlayer().getName() + ".json");
+        final SerializationManager serializationManager = new SerializationManager();
+        final Profile profile = Profile.createProfile(e.getPlayer());
+        final String json = serializationManager.serialize(profile);
+        System.out.println(profile.getX() + " " + profile.getY() + " " + profile.getZ());
+
+        FileUtils.save(playerFile, json);
+    }
 }

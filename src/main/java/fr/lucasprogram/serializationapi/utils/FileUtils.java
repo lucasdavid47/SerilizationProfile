@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2018.
+ */
+
 package fr.lucasprogram.serializationapi.utils;
 
 import java.io.*;

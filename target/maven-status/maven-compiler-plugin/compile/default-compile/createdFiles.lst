@@ -1,5 +1,6 @@
-fr\lucasprogram\serializationapi\listener\PlayerListener.class
 fr\lucasprogram\serializationapi\Profile\Profile.class
+fr\lucasprogram\serializationapi\commands\GodCmd.class
+fr\lucasprogram\serializationapi\listener\PlayerListener.class
 fr\lucasprogram\serializationapi\gsonutils\SerializationManager.class
 fr\lucasprogram\serializationapi\Serializationapi.class
 fr\lucasprogram\serializationapi\utils\FileUtils.class

@@ -1,0 +1,9 @@
+<!--
+  ~ Copyright (c) 2018.
+  -->
+
+<root>
+    <item name='org.bukkit.event.player.PlayerQuitEvent org.bukkit.event.HandlerList getHandlerList()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+</root>
